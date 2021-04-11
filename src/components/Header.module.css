@@ -1,0 +1,58 @@
+@font-face {
+  font-family: helveticaNue;
+  src: url('../assets/fonts/HelveticaNeue.woff');
+}
+
+.main {
+  background-color: #f5f5f3;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: helveticaNue;
+  border-bottom: 2px solid black;
+}
+
+.elSize {
+}
+
+.pageName {
+  margin-left: 40px;
+  font-size: 1.6em;
+  font-weight: 200;
+}
+
+.container {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 0px;
+  transform: scale(1, 1.2);
+}
+
+.actions ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.actions li {
+  list-style: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 40px;
+  font-size: 1.6em;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+p {
+  margin: 20px;
+}

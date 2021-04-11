@@ -1,0 +1,50 @@
+@font-face {
+  font-family: helveticaNue;
+  src: url('../assets/fonts/HelveticaNeue.woff');
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+
+img {
+  width: 93%;
+}
+
+.textContainer {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imageTitle {
+  font-family: helveticaNue;
+  font-weight: 600;
+  font-size: 1.4em;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.imageDesc {
+  font-family: helveticaNue;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+p {
+  margin: 0;
+}
