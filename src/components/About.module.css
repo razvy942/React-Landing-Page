@@ -1,0 +1,13 @@
+@font-face {
+  font-family: helveticaNue;
+  src: url('../assets/fonts/HelveticaNeue.woff');
+}
+
+.description {
+  font-size: 2.8em;
+  font-family: helveticaNue;
+  width: 70%;
+  margin: auto;
+  margin-top: 130px;
+  text-align: center;
+}

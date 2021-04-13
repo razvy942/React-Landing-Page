@@ -17,12 +17,12 @@
   flex-direction: column;
   border-right: 2px solid black;
   border-bottom: 2px solid black;
+  margin-right: -2px;
 }
 
 .bottom {
   flex-grow: 1;
   background: lightgrey;
-  min-height: calc(100vh - 50px);
 }
 
 .branding {
@@ -39,7 +39,8 @@
   margin-top: 20px;
   border-bottom: 2px solid black;
   padding-bottom: 40px;
-  /* border-left: 2px solid black; */
+  border-left: 2px solid black;
+  flex-wrap: wrap;
 }
 
 .about {

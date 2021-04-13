@@ -13,7 +13,7 @@ import Maison from '../assets/pngs/maison-1881.png';
 import TaupeMockup from '../assets/pngs/VARFMTS054 copy.png';
 import UpliftMockup from '../assets/pngs/uplf-1@2x.png';
 
-const MainPage = () => {
+const MainPage = (props) => {
   const [leftPanelImages, setLeftPanelImages] = useState([]);
   const [rightPanelImages, setrightPanelImages] = useState([]);
 
@@ -71,33 +71,63 @@ const MainPage = () => {
 
   useEffect(() => {
     populateState();
+    console.log(props.mobile);
+
+    // window.onbeforeunload = function () {
+    //   window.scrollTo(0, 0);
+    // };
   }, []);
 
   return (
     <div>
       <main className={classes.container}>
-        <div className={classes.lefPane}>
-          {leftPanelImages.map((img) => (
-            <div className={classes.imageContainer}>
-              <Image
-                source={img.src}
-                textTitle={img.title}
-                textBody={img.body}
-              />
+        {!props.mobile ? (
+          <>
+            <div className={classes.lefPane}>
+              {leftPanelImages.map((img) => (
+                <div className={classes.imageContainer}>
+                  <Image
+                    source={img.src}
+                    textTitle={img.title}
+                    textBody={img.body}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className={classes.righPane}>
-          {rightPanelImages.map((img) => (
-            <div className={classes.imageContainer}>
-              <Image
-                source={img.src}
-                textTitle={img.title}
-                textBody={img.body}
-              />
+            <div className={classes.righPane}>
+              {rightPanelImages.map((img) => (
+                <div className={classes.imageContainer}>
+                  <Image
+                    source={img.src}
+                    textTitle={img.title}
+                    textBody={img.body}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        ) : (
+          <div style={{ maxWidth: '100vw', overflowY: 'hidden' }}>
+            {leftPanelImages.map((img) => (
+              <div className={classes.imageContainer}>
+                <Image
+                  source={img.src}
+                  textTitle={img.title}
+                  textBody={img.body}
+                />
+              </div>
+            ))}
+            {rightPanelImages.map((img) => (
+              <div className={classes.imageContainer}>
+                <Image
+                  source={img.src}
+                  textTitle={img.title}
+                  textBody={img.body}
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </main>
     </div>
   );

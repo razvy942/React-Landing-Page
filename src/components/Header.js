@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import classes from './Header.module.css';
 
@@ -10,11 +11,20 @@ const Header = () => {
           Design & Art Direction
         </p>
         <p className={[classes.logo, classes.elSize].join(' ')}>
-          TAUPE STUDIOS
+          <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+            TAUPE STUDIOS
+          </Link>
         </p>
         <div className={[classes.actions, classes.elSize].join(' ')}>
           <ul>
-            <li>About</li>
+            <li>
+              <Link
+                to="/about"
+                style={{ textDecoration: 'none', color: 'black' }}
+              >
+                About
+              </Link>
+            </li>
             <li>Francais</li>
           </ul>
         </div>
